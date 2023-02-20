@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --title-font: "Open Sans", sans-serif;
+  --text-font: "Roboto", sans-serif;
+  --generic-font: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--title-font);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+body {
+  font-family: var(--text-font);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+p,
+span,
+a,
+button {
+  font-family: var(--text-font);
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+input,
+textarea {
+  font-family: var(--generic-font);
+}

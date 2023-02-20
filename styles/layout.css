@@ -1,0 +1,66 @@
+@import url("general.css");
+@import url("typography.css");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--font-color);
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+.content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 1 column for sidebar, 2 columns for main */
+  grid-template-rows: auto;
+  grid-template-areas: "sidebar main";
+}
+.content {
+  grid-row: 2;
+  grid-column: 1 / -1;
+}
+.sidebar {
+  padding: 1em;
+}
+
+/* Style the sidebar */
+.main {
+  background-color: var(--background-color);
+  padding: 1em;
+}
+
+header {
+  background-color: var(--main-color);
+  grid-row: 1;
+  grid-column: 1 / -1;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  text-align: center;
+  color: var(--background-color);
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: var(--complementary-color);
+  color: var(--background-color);
+  text-align: center;
+  grid-row: 3;
+  grid-column: 1 / -1;
+  padding: 1em;
+}
