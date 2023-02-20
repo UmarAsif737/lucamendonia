@@ -88,7 +88,6 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 2vh;
 }
 
 .product {
@@ -151,4 +150,15 @@ footer {
 
   grid-row: 2;
   grid-column: 1 / -1;
+}
+.content-container {
+  background-color: var(--background-color);
+}
+.calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-div {
+  margin: 20px 0;
 }

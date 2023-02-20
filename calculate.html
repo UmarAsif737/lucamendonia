@@ -1,42 +1,82 @@
+<!DOCTYPE html>
+
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/layout.css" />
+    <title>Buttons</title>
+  </head>
 
-<head></head>
-
-<body>
-    <div>
+  <body>
+    <div class="container">
+      <header>
+        <!-- <h1>Welcome to My Website</h1> -->
+        <img src="Logo_KangarooTec.png" alt="logo" />
+        <div class="navigation">
+          <a href="index.html">Home</a><a href="products.html">Products</a>
+          <a href="req6Task1.html">Buttons</a>
+          <a href="calculate.html">Cost Caculation</a>
+        </div>
+        <div></div>
+      </header>
+      <div class="main content calculator">
         <form>
-            <div>
-                <label>Revenues:</label>
-                <input type="number" class="revenues">
-            </div>
-            <div>
-                <label>Costs:</label>
-                <input type="number" class="costs">
-            </div>
-            <button type="button" id="calculate">Calculate</button>
-            <button type="reset">Reset</button>
-            <div id="result">Result: </div>
+          <h1>Revenues</h1>
+          <div>
+            <label>Revenue 1:</label>
+            <input type="number" class="revenues" />
+          </div>
+          <div>
+            <label>Revenue 2:</label>
+            <input type="number" class="revenues" />
+          </div>
+          <div>
+            <label>Revenue 3:</label>
+            <input type="number" class="revenues" />
+          </div>
+          <h1>Costs</h1>
+          <div>
+            <label>Cost 1:</label>
+            <input type="number" class="costs" />
+          </div>
+          <div>
+            <label>Cost 2:</label>
+            <input type="number" class="costs" />
+          </div>
+          <div>
+            <label>Cost 3:</label>
+            <input type="number" class="costs" />
+          </div>
+          <div class="button-div">
+            <button type="button" id="calculate" class="btn btn--positive">
+              Calculate
+            </button>
+            <button type="reset" class="btn btn--reset">Reset</button>
+          </div>
+          <div id="result">Result:</div>
         </form>
-
+      </div>
+      <footer>
+        <p>Copyright &copy; 2023 by My Website</p>
+      </footer>
     </div>
-
     <script>
-        const calculateBtn = document.getElementById('calculate');
-        const revenues = document.getElementsByClassName('revenues');
-        const costs = document.getElementsByClassName('costs');
-        const result = document.getElementById('result');
-
-        calculateBtn.addEventListener('click', function () {
-            let totalRevenue = 0;
-            let totalCost = 0;
-            for (let i = 0; i < revenues.length; i++) {
-                totalRevenue += parseFloat(revenues[i].value) || 0;
-                totalCost += parseFloat(costs[i].value) || 0;
-            }
-            result.innerHTML = `Result: ${(totalRevenue - totalCost).toFixed(2)}`;
-        });
-
+      const calculateBtn = document.getElementById("calculate");
+      const revenues = document.querySelectorAll(".revenues");
+      const costs = document.querySelectorAll(".costs");
+      const result = document.getElementById("result");
+      console.log(revenues);
+      console.log(costs);
+      calculateBtn.addEventListener("click", function () {
+        let totalRevenue = 0;
+        let totalCost = 0;
+        for (let i = 0; i < revenues.length; i++) {
+          totalRevenue += parseFloat(revenues[i].value) || 0;
+          totalCost += parseFloat(costs[i].value) || 0;
+        }
+        result.innerHTML = `Result: ${(totalRevenue - totalCost).toFixed(2)}`;
+      });
     </script>
-</body>
-
+  </body>
 </html>
