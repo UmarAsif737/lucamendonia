@@ -43,8 +43,38 @@ header {
   color: #fff;
   padding: 1em;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+img {
+  width: 5vw;
+}
+.navigation {
+  display: flex;
+}
+a {
+  display: block;
+  text-decoration: none;
+
+  padding: 1em;
 }
 
+a:link {
+  color: #fff;
+}
+
+a:visited {
+  color: var(--complementary-color-variant1);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--background-color);
+}
 header h1 {
   margin: 0;
   font-size: 36px;
@@ -54,6 +84,24 @@ header h1 {
 
 main {
   padding: 20px;
+}
+.product-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+.product {
+  width: 38em;
+  text-align: center;
+}
+
+.product img {
+  width: 80%;
+  object-fit: cover;
+  height: 60%;
 }
 
 footer {
