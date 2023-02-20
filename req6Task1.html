@@ -1,56 +1,36 @@
+<!DOCTYPE html>
+
 <html>
   <head>
-   <style>
-    .btn {
-  display: inline-block;
-  padding: 1em 2em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/layout.css" />
+    <title>Buttons</title>
+  </head>
 
-.btn--positive {
-  background-color: green;
-  color: white;
-  border-color: green;
-}
-
-.btn--danger {
-  background-color: red;
-  color: white;
-  border-color: red;
-}
-
-.btn--reset {
-  background-color: gray;
-  color: white;
-  border-color: gray;
-}
-
-.btn--small {
-  padding: 0.5em 1em;
-  font-size: 14px;
-}
-
-.btn--big {
-  padding: 2em 3em;
-  font-size: 20px;
-}
-
-  </style>
- </head>
-
-   <body>
-      <div>
+  <body>
+    <div class="container">
+      <header>
+        <!-- <h1>Welcome to My Website</h1> -->
+        <img src="Logo_KangarooTec.png" alt="logo" />
+        <div class="navigation">
+          <a href="index.html">Home</a><a href="products.html">Products</a>
+          <a href="req6Task1.html">Buttons</a>
+          <a href="calculate.html">Cost Caculation</a>
+        </div>
+        <div></div>
+      </header>
+      <div class="all-buttons">
         <button class="btn btn--positive">Positive Button</button>
-<button class="btn btn--danger">Danger Button</button>
-<button class="btn btn--reset">Reset Button</button>
-<button class="btn btn--small">Small Button</button>
-<button class="btn btn--big">Big Button</button>
+        <button class="btn btn--danger">Danger Button</button>
+        <button class="btn btn--reset">Reset Button</button>
+        <button class="btn btn--small">Small Button</button>
+        <button class="btn btn--big">Big Button</button>
+      </div>
 
-     </div>
-   </body>
- </html>
-
-
+      <footer>
+        <p>Copyright &copy; 2023 by My Website</p>
+      </footer>
+    </div>
+  </body>
+</html>

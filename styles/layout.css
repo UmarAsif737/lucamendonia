@@ -21,8 +21,6 @@ body {
   grid-template-columns: 1fr 2fr; /* 1 column for sidebar, 2 columns for main */
   grid-template-rows: auto;
   grid-template-areas: "sidebar main";
-}
-.content {
   grid-row: 2;
   grid-column: 1 / -1;
 }
@@ -111,4 +109,46 @@ footer {
   grid-row: 3;
   grid-column: 1 / -1;
   padding: 1em;
+}
+.btn {
+  display: inline-block;
+  padding: 1em 2em;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn--positive {
+  background-color: green;
+  color: white;
+  border-color: green;
+}
+
+.btn--danger {
+  background-color: red;
+  color: white;
+  border-color: red;
+}
+
+.btn--reset {
+  background-color: gray;
+  color: white;
+  border-color: gray;
+}
+
+.btn--small {
+  padding: 0.5em 1em;
+  font-size: 14px;
+}
+
+.btn--big {
+  padding: 2em 3em;
+  font-size: 20px;
+}
+.all-buttons {
+  width: 100%;
+
+  grid-row: 2;
+  grid-column: 1 / -1;
 }
